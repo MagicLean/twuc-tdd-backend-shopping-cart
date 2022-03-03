@@ -1,4 +1,4 @@
-package com.thoughtworks.capability.web;
+package com.thoughtworks.capability.web.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

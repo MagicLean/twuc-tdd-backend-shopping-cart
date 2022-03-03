@@ -1,6 +1,8 @@
 package com.thoughtworks.capability.web;
 
 import com.thoughtworks.capability.WebApplicationTest;
+import com.thoughtworks.capability.service.ShoppingCartService;
+import com.thoughtworks.capability.web.dto.ShoppingCartResponse;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
