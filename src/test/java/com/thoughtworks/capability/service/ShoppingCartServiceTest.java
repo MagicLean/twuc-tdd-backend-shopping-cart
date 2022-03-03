@@ -1,6 +1,6 @@
 package com.thoughtworks.capability.service;
 
-import com.thoughtworks.capability.infrastructure.ShoppingCartRepository;
+import com.thoughtworks.capability.infrastructure.ProductRepository;
 import com.thoughtworks.capability.web.dto.ShoppingCartResponse;
 import org.assertj.core.util.Lists;
 import org.junit.jupiter.api.Test;
@@ -12,13 +12,13 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 public class ShoppingCartServiceTest {
-    private ShoppingCartRepository shoppingCartRepository = mock(ShoppingCartRepository.class);
+    private ProductRepository productRepository = mock(ProductRepository.class);
 
-    private ShoppingCartService shoppingCartService = new ShoppingCartService(shoppingCartRepository);
+    private ShoppingCartService shoppingCartService = new ShoppingCartService(productRepository);
     @Test
     void shouldReturnShoppingCartWhenHasNoProducts() {
         // given
-        when(shoppingCartRepository.findAll()).thenReturn(Lists.emptyList());
+        when(productRepository.findAll()).thenReturn(Lists.emptyList());
         // when
         ShoppingCartResponse shoppingCart = shoppingCartService.findShoppingCart();
         // then
